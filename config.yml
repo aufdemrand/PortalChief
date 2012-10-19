@@ -1,4 +1,8 @@
 # Portal Chief
+
+allowed_worlds:          # Use - '*' to allow all worlds, or specify each on a seperate line.
+- '*'                    #  ...standard YAML list format.
+
 use_current_world: True  # TP to players current world spawn?
 world: World             # If use_current_world is false, TP to this world.
 

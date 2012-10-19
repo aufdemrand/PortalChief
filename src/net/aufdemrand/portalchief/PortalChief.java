@@ -1,38 +1,26 @@
 package net.aufdemrand.portalchief;
 
 import java.util.logging.Level;
+<<<<<<< HEAD
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+=======
+>>>>>>> Update to 1.0, allow only specific worlds.
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PortalChief extends JavaPlugin {
 
-
-	
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String cmdLabel, String[] args) {
-		return false;
-
-	}
-
 	@Override
 	public void onDisable() {
-		
 		getLogger().log(Level.INFO, " v" + getDescription().getVersion() + " disabled.");
-		
 	}
 
 	@Override
 	public void onEnable() {
-
-		this.getConfig().options().copyDefaults(true);
-		saveConfig();  
-
-		
+		saveDefaultConfig();
+		reloadConfig();
 		getServer().getPluginManager().registerEvents(new PortalListener(this), this);
-
-
 	}
 
 }
